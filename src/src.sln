@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlazySkinBackend", "GlazySkinBackend\GlazySkinBackend.csproj", "{95E02F88-D3BD-4897-A3FF-816E871251C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlazySkin.Domain", "GlazySkin.Domain\GlazySkin.Domain.csproj", "{1784B32C-72A6-4589-B3C3-ACCDF8ED87B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95E02F88-D3BD-4897-A3FF-816E871251C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95E02F88-D3BD-4897-A3FF-816E871251C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95E02F88-D3BD-4897-A3FF-816E871251C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95E02F88-D3BD-4897-A3FF-816E871251C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1784B32C-72A6-4589-B3C3-ACCDF8ED87B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1784B32C-72A6-4589-B3C3-ACCDF8ED87B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1784B32C-72A6-4589-B3C3-ACCDF8ED87B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1784B32C-72A6-4589-B3C3-ACCDF8ED87B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
