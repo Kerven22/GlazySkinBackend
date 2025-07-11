@@ -10,8 +10,6 @@ builder.Services.CustomConfigureSwagger();
 
 builder.Services.AddDomainServices();
 builder.Services.AddStorageServices(builder.Configuration.GetConnectionString("Default")); 
-
-
 var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
