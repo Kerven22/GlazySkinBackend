@@ -1,6 +1,3 @@
 namespace GlazySkin.Domain.UseCases.CategoryUseCase.Models;
 
-public class CategoryCommand
-{
-    
-}
+public record CategoryCommand(string Name);

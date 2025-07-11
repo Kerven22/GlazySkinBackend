@@ -1,6 +1,20 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using GlazySkinBackend.Domain.DependencyInjection;
+using GlazySkinBackend.Extentions;
+using GlazySkinBackend.Storage.DependencyInjection;
 
-app.MapGet("/", () => "Hello World!");
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.CustomConfigureSwagger();
+
+builder.Services.AddDomainServices();
+builder.Services.AddStorageServices(builder.Configuration.GetConnectionString("Default")); 
+
+
+var app = builder.Build();
+app.UseSwagger();
+app.UseSwaggerUI();
+app.MapControllers(); 
 
 app.Run();

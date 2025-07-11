@@ -1,6 +1,8 @@
+using GlazySkin.Domain.UseCases.CategoryUseCase.Models;
+
 namespace GlazySkin.Domain.UseCases.CategoryUseCase.GetCategoryUseCase;
 
-public class IGetCategoryUseCase
+public interface IGetCategoryUseCase
 {
-    
+    Task<IEnumerable<CategoryDto>> Execute(CancellationToken cancellationToken); 
 }

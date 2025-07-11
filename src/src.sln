@@ -2,7 +2,15 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlazySkinBackend", "GlazySkinBackend\GlazySkinBackend.csproj", "{95E02F88-D3BD-4897-A3FF-816E871251C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlazySkin.Domain", "GlazySkin.Domain\GlazySkin.Domain.csproj", "{1784B32C-72A6-4589-B3C3-ACCDF8ED87B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlazySkinBackend.Domain", "GlazySkinBackend.Domain\GlazySkinBackend.Domain.csproj", "{1784B32C-72A6-4589-B3C3-ACCDF8ED87B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlazySkinBackend.Domain.Test", "..\Tests\GlazySkinBackend.Domain.Test\GlazySkinBackend.Domain.Test.csproj", "{B97C0A02-5848-4D77-9430-6E27273F38E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlazySkinBackend.Storage", "GlazySkinBackend.Storage\GlazySkinBackend.Storage.csproj", "{220CC930-B711-44DA-80AF-F5CA3EBAF37F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlazySkinBackend.Domain.DependencyInjection", "GlazySkinBackend.Domain.DependencyInjection\GlazySkinBackend.Domain.DependencyInjection.csproj", "{FA9D7C79-0EE0-4FF1-865A-A49605163D1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlazySkinBackend.Storage.DependencyInjection", "GlazySkinBackend.Storage.DependencyInjection\GlazySkinBackend.Storage.DependencyInjection.csproj", "{FF7DA9F2-C93C-401A-A685-4A892F16A469}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +26,21 @@ Global
 		{1784B32C-72A6-4589-B3C3-ACCDF8ED87B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1784B32C-72A6-4589-B3C3-ACCDF8ED87B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1784B32C-72A6-4589-B3C3-ACCDF8ED87B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B97C0A02-5848-4D77-9430-6E27273F38E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B97C0A02-5848-4D77-9430-6E27273F38E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B97C0A02-5848-4D77-9430-6E27273F38E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B97C0A02-5848-4D77-9430-6E27273F38E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{220CC930-B711-44DA-80AF-F5CA3EBAF37F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{220CC930-B711-44DA-80AF-F5CA3EBAF37F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{220CC930-B711-44DA-80AF-F5CA3EBAF37F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{220CC930-B711-44DA-80AF-F5CA3EBAF37F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA9D7C79-0EE0-4FF1-865A-A49605163D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9D7C79-0EE0-4FF1-865A-A49605163D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9D7C79-0EE0-4FF1-865A-A49605163D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9D7C79-0EE0-4FF1-865A-A49605163D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF7DA9F2-C93C-401A-A685-4A892F16A469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF7DA9F2-C93C-401A-A685-4A892F16A469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF7DA9F2-C93C-401A-A685-4A892F16A469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF7DA9F2-C93C-401A-A685-4A892F16A469}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
