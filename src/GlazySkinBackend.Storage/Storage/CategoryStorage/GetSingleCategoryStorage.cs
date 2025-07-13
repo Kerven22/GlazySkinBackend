@@ -21,4 +21,9 @@ public class GetSingleCategoryStorage:IGetSingleCategoryStorage
             .FirstOrDefaultAsync(cancellationToken);
         return categoryDto; 
     }
+
+    public async Task<bool> CategoryExists(Guid categoryId, CancellationToken cancellationToken)
+    {
+        return await _dbContext.Categories.AnyAsync(c => categoryId.Equals(c.CategoryId), cancellationToken); 
+    }
 }
