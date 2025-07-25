@@ -40,4 +40,19 @@ public class CreateProductUseCaseShould
         var actual = sut.Invoking(cp => cp.Execute(categoryId, new ProductCommand("Anti-Age", 23.4m), CancellationToken.None));
         actual.Should().ThrowAsync<CategoryNotFoundException>(); 
     }
+
+    [Fact]
+    public void SuccessfulCreatedProduct_WhenAllInputCorrect()
+    {
+        var productDto = new ProductDto() { Id = Guid.Parse("7d93cb55-57db-40a5-ba1a-82b249a4c8bb"), Categoryid = Guid.Parse("f62dc957-fa1a-4a37-bdeb-2b3097ccb1e7"),Name = "Anti-Age", Price = 23.4m };
+
+        var productCommand = new ProductCommand("Anti-Age", 23.4m); 
+
+        stroageSetup.ReturnsAsync(productDto);
+
+        var actual = sut.Invoking(cp =>
+            cp.Execute(Guid.Parse("f62dc957-fa1a-4a37-bdeb-2b3097ccb1e7"), productCommand, CancellationToken.None));
+        
+
+    }
 }

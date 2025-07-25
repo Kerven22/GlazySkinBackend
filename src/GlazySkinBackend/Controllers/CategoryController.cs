@@ -10,7 +10,7 @@ namespace GlazySkinBackend.Controllers
     [Route("categories")]
     public class CategoryController:ControllerBase
     {
-        [HttpGet]
+        [HttpGet("all")]
         public async Task<IActionResult> GetCategories([FromServices] IGetCategoryUseCase getCategoryUseCase, CancellationToken cancellationToken)
         {
             var categories = await getCategoryUseCase.Execute(cancellationToken); 

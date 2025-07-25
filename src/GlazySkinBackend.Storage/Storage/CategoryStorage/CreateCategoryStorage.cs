@@ -9,24 +9,27 @@ namespace GlazySkinBackend.Stroage.Storage.CategoryStorage;
 public class CreateCategoryStorage:ICreateCategoryStorage
 {
     private readonly GlazySkinDbContext _dbContext;
+    private readonly IGuidFactory _guidFactory; 
 
-    public CreateCategoryStorage(GlazySkinDbContext dbContext)
+    public CreateCategoryStorage(GlazySkinDbContext dbContext, IGuidFactory guidFactory)
     {
-        _dbContext = dbContext; 
+        _dbContext = dbContext;
+        _guidFactory = guidFactory; 
     }
-    public async Task<CategoryDto> CreateCategory(string Name, CancellationToken cancellationToken)
+    public async Task<CategoryDto> CreateCategory(string name, CancellationToken cancellationToken)
     {
-        var id = Guid.NewGuid();
+        var id = _guidFactory.Create();
         var category = new Category()
         {
-            CategoryId = id, Name = Name
+            CategoryId = id, 
+            Name = name
 
         };
         await _dbContext.Categories.AddAsync(category);
         await _dbContext.SaveChangesAsync(cancellationToken);
-        var categoryDto = await _dbContext.Categories
+
+         return await _dbContext.Categories
             .Select(c=>new CategoryDto(){Id=c.CategoryId, Name = c.Name})
             .FirstAsync(cancellationToken);
-        return categoryDto; 
     }
 }

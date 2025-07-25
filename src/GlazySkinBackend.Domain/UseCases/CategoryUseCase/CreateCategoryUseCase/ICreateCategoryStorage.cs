@@ -4,5 +4,5 @@ namespace GlazySkin.Domain.UseCases.CategoryUseCase.CreateCategoryUseCase;
 
 public interface ICreateCategoryStorage
 {
-    Task<CategoryDto> CreateCategory(string Name, CancellationToken cancellationToken); 
+    Task<CategoryDto> CreateCategory(string name, CancellationToken cancellationToken); 
 }

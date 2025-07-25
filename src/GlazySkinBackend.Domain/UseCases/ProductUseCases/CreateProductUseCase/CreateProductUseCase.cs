@@ -27,8 +27,10 @@ public class CreateProductUseCase:ICreateProductUseCase
 
         var categoryExist = await _getCategoryExist.CategoryExists(categoryId, cancellationToken);
         if (!categoryExist)
-            throw new CategoryNotFoundException(categoryId); 
-        
-        return new ProductDto(); 
+            throw new CategoryNotFoundException(categoryId);
+
+        var productDto = await _createProductStorage.CreateProduct(categoryId, command.Name, command.price, cancellationToken);
+
+        return productDto;
     }
 }
